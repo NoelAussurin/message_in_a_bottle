@@ -1,0 +1,28 @@
+{# miab/templates/layout.html: #}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<link rel="stylesheet" href="{{ url_for('pygments_css') }}"/>
+		<!--<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}"/>-->
+	</head>
+	<body>
+		<header>
+			<h1>About a common young developer :D</h1>
+		</header>
+		<nav>
+			<li><a href="/">Home</a></li>
+			<li><a href="about">About</a></li>
+			<li><a href="projects">Projects</a></li>
+		</nav>
+		<section>
+			<article>
+				{% block content %}
+				{% endblock %}
+			</article>
+		</section>
+		<footer>
+			Sören Usulian - 2014
+		</footer>
+	</body>
+</html>
